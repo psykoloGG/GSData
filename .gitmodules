@@ -1,0 +1,7 @@
+[submodule "GSData/Libraries/imgui"]
+	path = GSData/Libraries/imgui
+	url = https://github.com/ocornut/imgui
+	branch = docking
+[submodule "GSData/Libraries/stb"]
+	path = GSData/Libraries/stb
+	url = https://github.com/nothings/stb
