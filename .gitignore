@@ -31,9 +31,11 @@
 *.out
 *.app
 
-# Imgui config
-imgui.ini
+# Editors
+.vs/
+.idea/
 
 # Builds
 /GSData/x64/
 /x64/
+GSData/imgui.ini
