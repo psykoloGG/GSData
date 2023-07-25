@@ -71,12 +71,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)Libraries\imgui;$(ProjectDir)Libraries\glfw\include;$(ProjectDir)Source\Utils;$(ProjectDir)Libraries\imgui\backends;$(ProjectDir)Libraries\stb;$(ProjectDir)Source\Games;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)Libraries\glfw\lib-vc2022;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)Libraries\imgui;$(ProjectDir)Libraries\glfw\include;$(ProjectDir)Source\Utils;$(ProjectDir)Libraries\imgui\backends;$(ProjectDir)Libraries\stb;$(ProjectDir)Source\Games;$(ProjectDir)Libraries\boost\libs\asio\include;$(ProjectDir)Source\Services;$(ProjectDir)Libraries\boost\libs\thread\include;$(ProjectDir)Libraries\boost;$(ProjectDir)Libraries\boost\libs\beast\include;$(ProjectDir)Libraries\httpserver;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Libraries\glfw\lib-vc2022;$(ProjectDir)Libraries\boost\stage\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir)Libraries\imgui;$(ProjectDir)Libraries\glfw\include;$(ProjectDir)Source\Utils;$(ProjectDir)Libraries\imgui\backends;$(ProjectDir)Libraries\stb;$(ProjectDir)Source\Games;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)Libraries\glfw\lib-vc2022;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)Libraries\imgui;$(ProjectDir)Libraries\glfw\include;$(ProjectDir)Source\Utils;$(ProjectDir)Libraries\imgui\backends;$(ProjectDir)Libraries\stb;$(ProjectDir)Source\Games;$(ProjectDir)Libraries\boost\libs\asio\include;$(ProjectDir)Source\Services;$(ProjectDir)Libraries\boost\libs\thread\include;$(ProjectDir)Libraries\boost;$(ProjectDir)Libraries\boost\libs\beast\include;$(ProjectDir)Libraries\httpserver;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Libraries\glfw\lib-vc2022;$(ProjectDir)Libraries\boost\stage\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -112,6 +112,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)PROJECT_DIR=R"($(ProjectDir))"</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,6 +128,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)PROJECT_DIR=R"($(ProjectDir))"</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,6 +151,8 @@
     <ClCompile Include="Source\Games\CSGO\CSGOGame.cpp" />
     <ClCompile Include="Source\Games\Dota2\Dota2Game.cpp" />
     <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\Services\HttpListener.cpp" />
+    <ClCompile Include="Source\Services\Request.cpp" />
     <ClCompile Include="Source\Utils\OpenGLUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +171,8 @@
     <ClInclude Include="Source\Games\BaseGame.h" />
     <ClInclude Include="Source\Games\CSGO\CSGOGame.h" />
     <ClInclude Include="Source\Games\Dota2\Dota2Game.h" />
+    <ClInclude Include="Source\Services\HttpListener.h" />
+    <ClInclude Include="Source\Services\Request.h" />
     <ClInclude Include="Source\Utils\OpenGLUtils.h" />
   </ItemGroup>
   <ItemGroup>
